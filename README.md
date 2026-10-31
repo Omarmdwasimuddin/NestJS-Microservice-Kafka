@@ -11,7 +11,7 @@ cd nest-kafka
 
 ####
 ```bash
-
+npm i -d @nx/nest
 ```
 ---
 
