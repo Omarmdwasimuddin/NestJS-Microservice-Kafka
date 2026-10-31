@@ -20,3 +20,9 @@ npm i -d @nx/nest
 npx nx g @nx/nest:app api-gateway
 ```
 ---
+
+####
+```bash
+npx nx g @nx/nest:app notification-service
+```
+---
