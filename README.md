@@ -2,7 +2,7 @@
 
 ####
 ```bash
-
+npx create-nx-workspace@latest nest-kafka
 ```
 ---
 
