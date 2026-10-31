@@ -17,6 +17,6 @@ npm i -d @nx/nest
 
 ####
 ```bash
-
+npx nx g @nx/nest:app api-gateway
 ```
 ---
