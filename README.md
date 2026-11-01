@@ -141,13 +141,13 @@ export class AppController {
 ---
 
 ####
-```bash
+```ts
 
 ```
 ---
 
 ####
-```bash
+```ts
 
 ```
 ---
