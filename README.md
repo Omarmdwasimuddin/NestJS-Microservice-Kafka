@@ -35,7 +35,10 @@ npm i @nestjs/microservices@^11 kafkajs
 
 ####
 ```bash
-
+docker --version
+```
+```bash
+docker compose version
 ```
 ---
 
