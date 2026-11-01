@@ -32,3 +32,21 @@ npx nx g @nx/nest:app notification-service
 npm i @nestjs/microservices@^11 kafkajs
 ```
 ---
+
+####
+```bash
+
+```
+---
+
+####
+```bash
+
+```
+---
+
+####
+```bash
+
+```
+---
