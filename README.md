@@ -83,8 +83,10 @@ services:
 
 > Ctrl+x click koro
 ```bash
-
+docker compose up -d
 ```
+> ei command deyar por jodi error ashe jemon---
+##### permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
 ---
 
 ####
