@@ -1,4 +1,4 @@
-<img width="935" height="785" alt="image" src="https://github.com/user-attachments/assets/bf7506c6-4e90-4d69-a5a6-0b90e389d0ba" />## NestJS-Microservice-Kafka
+## NestJS-Microservice-Kafka
 
 ####
 ```bash
