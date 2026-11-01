@@ -90,7 +90,7 @@ docker compose up -d
 
 ####
 ```bash
-
+docker logs -f kafka
 ```
 ---
 
