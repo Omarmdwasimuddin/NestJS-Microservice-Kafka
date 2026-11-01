@@ -95,7 +95,7 @@ docker logs -f kafka
 ---
 
 #### `notification-service/src/main.ts`
-```bash
+```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { MicroserviceOptions, Transport } from "@nestjs/microservices";
@@ -125,7 +125,7 @@ bootstrap();
 ---
 
 #### `notification-service/src/app/app.controller.ts`
-```bash
+```ts
 import { Controller } from '@nestjs/common';
 import { EventPattern, Payload } from '@nestjs/microservices';
 
