@@ -140,6 +140,12 @@ export class AppController {
 ```
 ---
 
+#### `api-gateway/src/main.ts`
+```ts
+
+```
+---
+
 ####
 ```ts
 
