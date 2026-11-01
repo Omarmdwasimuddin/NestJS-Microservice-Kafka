@@ -76,9 +76,14 @@ services:
       CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
 ```
 > code paste koro
->
+> Ctrl+s click koro
+
 <img width="805" height="851" alt="image" src="https://github.com/user-attachments/assets/b2cc140d-8b61-44ba-ba2c-630ab5bcabf2" />
 
+> Ctrl+x click koro
+```bash
+
+```
 ---
 
 ####
