@@ -44,7 +44,7 @@ docker --version
 docker compose version
 ```
 ```bash
-
+nano docker-compose.yml
 ```
 ---
 
