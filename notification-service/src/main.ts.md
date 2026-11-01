@@ -370,7 +370,3 @@ Kafka →  @EventPattern()   + emit()  =  Event-driven
 > Kafka-তে `@MessagePattern()` দিয়েও Request–Response করা যায়, তবে সাধারণ Event Consumer-এর জন্য `@EventPattern()` বেশি উপযুক্ত।
 
 ---
-
-## 🚀 পরবর্তী ধাপ
-
-**Kafka Producer** তৈরি করে `notifications` Topic-এ message পাঠাও, আর এই Consumer দিয়ে সেটা গ্রহণ করে practice করো। তাহলে Producer–Consumer Architecture পরিষ্কার হয়ে যাবে।
