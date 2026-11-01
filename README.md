@@ -1,4 +1,4 @@
-## NestJS-Microservice-Kafka
+<img width="935" height="785" alt="image" src="https://github.com/user-attachments/assets/bf7506c6-4e90-4d69-a5a6-0b90e389d0ba" />## NestJS-Microservice-Kafka
 
 ####
 ```bash
@@ -85,8 +85,7 @@ services:
 ```bash
 docker compose up -d
 ```
-> ei command deyar por jodi error ashe jemon---
-##### permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+> ei command deyar por jodi error ashe eta dekhun [Docker Compose Permission Denied Error (WSL Ubuntu)](https://github.com/Omarmdwasimuddin/Docker-Compose-Permission-Denied-Error-WSL-Ubuntu-)
 ---
 
 ####
