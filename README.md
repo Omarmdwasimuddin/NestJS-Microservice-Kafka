@@ -47,6 +47,7 @@ docker compose version
 ```bash
 nano docker-compose.yml
 ```
+#### Configure Kafka Broker
 ```yaml
 services:
   kafka:
@@ -83,19 +84,20 @@ services:
 <img width="805" height="851" alt="image" src="https://github.com/user-attachments/assets/b2cc140d-8b61-44ba-ba2c-630ab5bcabf2" />
 
 > Ctrl+x click koro
+#### Start Kafka Container
 ```bash
 docker compose up -d
 ```
 > ei command deyar por jodi error ashe eta dekhun [Docker Compose Permission Denied Error (WSL Ubuntu)](https://github.com/Omarmdwasimuddin/Docker-Compose-Permission-Denied-Error-WSL-Ubuntu-)
 ---
 
-####
+#### Verify Kafka Broker
 ```bash
 docker logs -f kafka
 ```
 ---
 
-#### `notification-service/src/main.ts`
+#### Configure Notification Microservice: `notification-service/src/main.ts`
 ```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
@@ -125,7 +127,7 @@ bootstrap();
 ```
 ---
 
-#### `notification-service/src/app/app.controller.ts`
+#### Handle Kafka Events: `notification-service/src/app/app.controller.ts`
 ```ts
 import { Controller } from '@nestjs/common';
 import { EventPattern, Payload } from '@nestjs/microservices';
@@ -141,7 +143,7 @@ export class AppController {
 ```
 ---
 
-#### `api-gateway/src/main.ts`
+#### Configure API Gateway: `api-gateway/src/main.ts`
 ```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
@@ -156,7 +158,7 @@ bootstrap();
 ```
 ---
 
-#### `api-gateway/src/app/app.module.ts`
+#### Register Kafka Client: `api-gateway/src/app/app.module.ts`
 ```ts
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -186,7 +188,7 @@ export class AppModule {}
 ```
 ---
 
-#### `api-gateway/src/app/app.controller.ts`
+#### Publish Kafka Events: `api-gateway/src/app/app.controller.ts`
 ```ts
 import { Controller, Get, Inject, OnModuleInit } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
@@ -216,7 +218,7 @@ export class AppController implements OnModuleInit {
 ```
 ---
 
-####
+#### Run Microservices
 ```bash
 npx nx serve notification-service
 ```
@@ -225,7 +227,7 @@ npx nx serve api-gateway
 ```
 ---
 
-####
+#### Test Kafka Event Communication
 ```bash
 http://localhost:3000/create-user
 ```
