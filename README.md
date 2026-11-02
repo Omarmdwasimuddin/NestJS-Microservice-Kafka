@@ -199,3 +199,11 @@ npx nx serve notification-service
 npx nx serve api-gateway
 ```
 ---
+
+####
+```bash
+http://localhost:3000/create-user
+```
+<img width="386" height="219" alt="image" src="https://github.com/user-attachments/assets/638d3934-c6b5-406c-8aa5-0c6ecf888cf5" />
+
+---
