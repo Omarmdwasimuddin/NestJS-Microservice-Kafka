@@ -1,4 +1,4 @@
-## NestJS-Microservice-Kafka
+## NestJS Microservices with Kafka
 
 #### Create Nx Workspace
 ```bash
