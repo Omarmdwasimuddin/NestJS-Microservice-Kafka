@@ -190,3 +190,9 @@ export class AppModule {}
 
 ```
 ---
+
+####
+```bash
+npx nx serve notification-service
+```
+---
