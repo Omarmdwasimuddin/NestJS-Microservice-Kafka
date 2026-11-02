@@ -1,39 +1,40 @@
 ## NestJS-Microservice-Kafka
 
-####
+#### Create Nx Workspace
 ```bash
 npx create-nx-workspace@latest nest-kafka
 ```
-```bash
+```bash 
 cd nest-kafka
+
 ```
 ---
 
-####
+#### Install Nx NestJS Plugin
 ```bash
 npm i -d @nx/nest
 ```
 ---
 
-####
+#### Generate API Gateway Application
 ```bash
 npx nx g @nx/nest:app api-gateway
 ```
 ---
 
-####
+#### Generate Notification Microservice
 ```bash
 npx nx g @nx/nest:app notification-service
 ```
 ---
 
-####
+#### Install Kafka Dependencies
 ```bash
 npm i @nestjs/microservices@^11 kafkajs
 ```
 ---
 
-####
+#### Setup Kafka with Docker
 ```bash
 wsl -d Ubuntu
 ```
@@ -46,7 +47,7 @@ docker compose version
 ```bash
 nano docker-compose.yml
 ```
-```ts
+```yaml
 services:
   kafka:
     image: apache/kafka:3.9.0
