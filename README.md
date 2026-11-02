@@ -34,7 +34,7 @@ npm i @nestjs/microservices@^11 kafkajs
 ```
 ---
 
-#### Setup Kafka with Docker
+#### Setup Kafka Using Docker
 ```bash
 wsl -d Ubuntu
 ```
@@ -47,7 +47,7 @@ docker compose version
 ```bash
 nano docker-compose.yml
 ```
-#### Configure Kafka Broker
+#### Create Kafka Docker Compose Configuration
 ```yaml
 services:
   kafka:
@@ -91,13 +91,13 @@ docker compose up -d
 > ei command deyar por jodi error ashe eta dekhun [Docker Compose Permission Denied Error (WSL Ubuntu)](https://github.com/Omarmdwasimuddin/Docker-Compose-Permission-Denied-Error-WSL-Ubuntu-)
 ---
 
-#### Verify Kafka Broker
+#### Verify Kafka Container
 ```bash
 docker logs -f kafka
 ```
 ---
 
-#### Configure Notification Microservice: `notification-service/src/main.ts`
+#### Configure Notification Microservice Bootstrap: `notification-service/src/main.ts`
 ```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
@@ -127,7 +127,7 @@ bootstrap();
 ```
 ---
 
-#### Handle Kafka Events: `notification-service/src/app/app.controller.ts`
+#### Consume Kafka Events: `notification-service/src/app/app.controller.ts`
 ```ts
 import { Controller } from '@nestjs/common';
 import { EventPattern, Payload } from '@nestjs/microservices';
@@ -143,7 +143,7 @@ export class AppController {
 ```
 ---
 
-#### Configure API Gateway: `api-gateway/src/main.ts`
+#### Configure API Gateway Bootstrap: `api-gateway/src/main.ts`
 ```ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
@@ -188,7 +188,7 @@ export class AppModule {}
 ```
 ---
 
-#### Publish Kafka Events: `api-gateway/src/app/app.controller.ts`
+#### Publish Events to Kafka: `api-gateway/src/app/app.controller.ts`
 ```ts
 import { Controller, Get, Inject, OnModuleInit } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
@@ -218,7 +218,7 @@ export class AppController implements OnModuleInit {
 ```
 ---
 
-#### Run Microservices
+#### Run the Applications
 ```bash
 npx nx serve notification-service
 ```
