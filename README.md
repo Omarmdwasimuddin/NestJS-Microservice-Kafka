@@ -185,9 +185,33 @@ export class AppModule {}
 ```
 ---
 
-####
+#### `api-gateway/src/app/app.controller.ts`
 ```ts
+import { Controller, Get, Inject, OnModuleInit } from '@nestjs/common';
+import { ClientKafka } from '@nestjs/microservices';
 
+@Controller()
+export class AppController implements OnModuleInit {
+  constructor(
+    @Inject('KAFKA_SERVICE') private readonly kafkaClient: ClientKafka
+  ) {}
+
+  async onModuleInit() {
+    await this.kafkaClient.connect();
+  }
+
+  @Get('create-user')
+  async createUser() {
+    const user = {
+      id: 1,
+      name: 'Wasim',
+      email: 'wasim@example.com'
+    };
+    this.kafkaClient.emit('user_created', user);
+    return { message: 'User Created Event Published!', user };
+  }
+  
+}
 ```
 ---
 
